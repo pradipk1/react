@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function createh2(){
+            var h2Ref=(
+                <h2 id='id1' style={{color:'green'}}> React with JSX </h2>
+            );
+            return h2Ref;
+        }
+
+        function main(){
+            var container=(
+                <div>
+                    {createh2()}
+                    {createh2()}
+                    {createh2()}
+                </div>
+            );
+
+            ReactDOM.render(container,document.getElementById('root'));
+        }
+        main();
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>
