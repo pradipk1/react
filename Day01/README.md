@@ -55,3 +55,13 @@ to get the solution of your problem.
 * React provides reusability feature.
 * React apllications are very very fast that's why the application peformance is good.
 * Development process is very fast.
+
+
+# What is JSX?
+
+* JSX stands for JavaScript XML. JSX allows us to write HTML in React.
+* JSX is a JavaScript Extension Syntax used in React to easily write HTML and JavaScript together.
+
+# What is Babel?
+
+* Babel is a compiler which helps to convert a JSX code into native React code.

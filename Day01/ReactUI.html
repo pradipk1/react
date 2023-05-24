@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Following script is for React Library from react official CDN link -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- Following script is for ReactDOM Library from react official CDN link -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body id="container">
+    
+    <script>
+        var divRef=React.createElement('div',null,React.createElement('p',null, 'React is used for creating UI'));
+        ReactDOM.render(divRef,document.getElementById('container'));
+        // Above example is to append only one child inside the div element.
+
+        // Below is the  example to append more than one element inside the div element
+        var divRef2=React.createElement('div',null,[React.createElement('h3',null,'First child'),
+        React.createElement('h3',null,'Second child')]);
+        ReactDOM.render(divRef2,document.getElementById('container'));
+
+        // The above both examples are native React code.
+    </script>
+</body>
+</html>

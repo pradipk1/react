@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Following script is for React Library from react official CDN link -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- Following script is for ReactDOM Library from react official CDN link -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Following script is for Babel compiler from babel JS official website -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        var div=(
+            <div>
+                <h2>JSX code</h2>
+            </div>
+        );
+        ReactDOM.render(div,document.getElementById('root'));
+    </script>
+</body>
+</html>

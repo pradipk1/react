@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Following script is for React Library from react official CDN link -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- Following script is for ReactDOM Library from react official CDN link -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+            // Syntax to create an element => React.createElement('element','attribute','content') => 
+            // This will return the ref of the element
+            let h2Ref=React.createElement('h2',null,"Welcome to React!"); // internally <h2>Welcome to React!</h2>
+            // React only creates the element, it does not append the element.
+            // To append the element another Library came in picture which is ReactDOM.
+
+            // Syntax to append element => ReactDOM.render(element ref, location where to append)
+            ReactDOM.render(h2Ref,document.getElementById('root'));
+            // render() is a pre-defined function which is from ReactDOM Library.
+        createH2();
+    </script>
+</body>
+</html>
