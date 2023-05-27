@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function CreateNav(){
+            var navStyle={
+                backgroundColor:"black",
+                padding:"20px",
+                textAlign:"right",
+            }
+            var astyle={
+                color:"white",
+                marginRight:"50px",
+                textDecoration:"none",
+            }
+            return (
+                <div style={navStyle}>
+                    <a style={astyle} href="">Home</a>
+                    <a style={astyle} href="">About</a>
+                    <a style={astyle} href="">Service</a>
+                    <a style={astyle} href="">Help</a>
+                </div>
+            )
+        }
+
+        function CreateCard(obj){
+            var cardStyle={
+                width:"250px",
+                padding:"20px",
+                boxShadow:"0 0 10px black",
+                textAlign:"center"
+            }
+            return(
+                <div style={cardStyle}>
+                    <img src={obj.img} width="100%" height="200" />
+                    <h2>{obj.name}</h2>
+                    <p>{obj.gender}</p>
+                </div>
+            )
+        }
+
+        function App(){
+            var container = (
+                <>
+                    <CreateNav />
+                    <div style={{display:"flex", justifyContent:"space-between", marginTop:"50px "}}>
+                        <CreateCard 
+                            img="https://img.freepik.com/free-photo/mand-holding-cup_1258-340.jpg"
+                            name="Rajiv Mehta"
+                            gender="Male"
+                        />
+                        <CreateCard 
+                            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwHEmeOtMAcGLryd1ZatB3Tt7o8nDrbnM56Q&usqp=CAU"
+                            name="Sneha"
+                            gender="Female"
+                        />
+                        <CreateCard 
+                            img="https://images.forwardcdn.com/image/970x/center/images/cropped/istock-627909282-1514234385.jpg"
+                            name="Zoya"
+                            gender="Female"
+                        />
+                        <CreateCard 
+                            img="https://ath2.unileverservices.com/wp-content/uploads/sites/3/2017/09/professional-mens-hairstyles-combed-min-1024x683.jpg"
+                            name="Rahul"
+                            gender="Male"
+                        /> 
+                    </div>
+                </>
+            )
+
+            ReactDOM.render(container,document.getElementById('root'));
+        }
+        App();
+    </script>
+</body>
+
+</html>
