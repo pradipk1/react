@@ -4,7 +4,7 @@
 * Wrap all React Elements inside one container(<div></div>, <></> etc).
 * Every element should have opening and closing tag or it should be a self closing tag.
 
-#  CRA => create-react-app
+# CRA => create-react-app
 
 ## How to initiate a react projrct
 * npx create-react-app "project name in lower case"
@@ -24,4 +24,4 @@
 
 # What is Props in React?
 * Any Attribute which we are passing to the React Component are called Props.
-* Props => Properties 
+* Props => Properties
