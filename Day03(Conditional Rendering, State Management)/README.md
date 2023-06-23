@@ -14,3 +14,7 @@
 * Using useState(), we can create a State variable.
 * useState() returns an array of length two.
 * Ex: const [state, setState] = useState();
+
+### What is setState()?
+* It will update State.
+* It will re-render The Component.
