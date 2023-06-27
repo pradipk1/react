@@ -1,9 +1,11 @@
 
+import Text from "./Components/Child-Parent/Text";
 import Counter from "./Components/Counter/Counter";
 import Footer from "./Components/Footer/Footer";
 import List from "./Components/List/List";
 import A from "./Components/Module/A";
 import B from "./Components/Module/B";
+import Input from "./Components/Parent-Child/Input";
 import Nav from "./Components/State_API/Nav";
 import Profile from "./Components/State_API/Profile";
 import Todo from "./Components/Todo/Todo";
@@ -33,9 +35,11 @@ function App() {
 
     <div>
       <Nav />
-      <A />
-      <B />
-      <Profile />
+      <Text />
+      {/* <Input /> */}
+      {/* <A /> */}
+      {/* <B /> */}
+      {/* <Profile /> */}
       {/* <Counter /> */}
       {/* <List /> */}
       {/* <Todo /> */}
