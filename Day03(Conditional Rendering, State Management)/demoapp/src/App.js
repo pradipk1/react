@@ -2,8 +2,13 @@
 import Counter from "./Components/Counter/Counter";
 import Footer from "./Components/Footer/Footer";
 import List from "./Components/List/List";
+import A from "./Components/Module/A";
+import B from "./Components/Module/B";
+import Nav from "./Components/State_API/Nav";
+import Profile from "./Components/State_API/Profile";
 import Todo from "./Components/Todo/Todo";
 import Header from "./Header";
+
 
 function App() {
   var header=true;
@@ -27,9 +32,13 @@ function App() {
     // </div>
 
     <div>
-      {/* <Counter />
-      <List /> */}
-      <Todo />
+      <Nav />
+      <A />
+      <B />
+      <Profile />
+      {/* <Counter /> */}
+      {/* <List /> */}
+      {/* <Todo /> */}
     </div>
   );
 }

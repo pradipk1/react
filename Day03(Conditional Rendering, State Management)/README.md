@@ -16,5 +16,6 @@
 * Ex: const [state, setState] = useState();
 
 ### What is setState()?
-* It will update State.
-* It will re-render The Component.
+* It will update the State.
+* It will re-render the Component if and only if prev State and new State value both are different.
+* It is an asychronous function that means it takes some time to update the State.

@@ -4,11 +4,20 @@ import './Counter.css'
 function Counter() {
 
   let [state, setState] = useState(0);
-  console.log(state);
+  console.log("Counter comp is called");
 
     const updateCount = () =>{
         // alert("clicked!");
+
+        // here final state value is 3 if initial state value is 0
         setState(state+1);
+        setState(state+2);
+        setState(state+3);
+
+        // here final state value is 6 if initial state value is 0
+        setState((prevState)=> prevState+1);
+        setState((prevState)=> prevState+2);
+        setState((prevState)=> prevState+3);
     }
   return (
     <div className='counter'>
