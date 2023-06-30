@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import './Profile.css';
 
 function Profile() {
@@ -9,6 +9,10 @@ function Profile() {
         city:'Delhi',
         image:'https://images.unsplash.com/flagged/photo-1573603867003-89f5fd7a7576?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
     });
+
+    useEffect(()=>{
+        getUserData();
+    },[])
 
     const [styles,setStyles] = useState({
         bgColor:'white',
