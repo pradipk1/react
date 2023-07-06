@@ -1,4 +1,4 @@
-### Life Cycle of Human
+## Life Cycle of Human
 * Period from Birth to Death.
 * We have different phases like
     * Child Phase
