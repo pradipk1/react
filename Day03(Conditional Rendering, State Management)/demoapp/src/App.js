@@ -39,18 +39,18 @@ function App() {
 
     <div>
       <Nav />
-      {state ? <Cardd /> : <Table />}
+      {/* {state ? <Cardd /> : <Table />}
       <div style={{textAlign:'center', marginBottom:'50px'}}>
         <button onClick={()=>{setState(true)}}>Show Card</button>
         <button onClick={()=>{setState(false)}}>Show Table</button>
-      </div>
+      </div> */}
       
       {/* <Text /> */}
       {/* <Input /> */}
       {/* <A /> */}
       {/* <B /> */}
       {/* <Profile /> */}
-      {/* <Counter /> */}
+      <Counter />
       {/* <List /> */}
       {/* <Todo /> */}
     </div>

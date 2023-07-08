@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Counter.css'
 
 function Counter() {
 
   let [state, setState] = useState(0);
   console.log("Counter comp is called");
+
+  useEffect(()=>{
+    document.title=`Count value is ${state}`
+  })
 
     const updateCount = () =>{
         // alert("clicked!");
