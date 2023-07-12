@@ -13,6 +13,10 @@ import Nav from "./Components/State_API/Nav";
 import Profile from "./Components/State_API/Profile";
 import Todo from "./Components/Todo/Todo";
 import Header from "./Header";
+import Timer from "./Components/Timer/Timer";
+import Dom from "./Components/DOM/Dom";
+import UnControlledForm from "./Components/Form/UnControlledForm";
+import ControlledForm from "./Components/Form/ControlledForm";
 
 
 function App() {
@@ -39,6 +43,10 @@ function App() {
 
     <div>
       <Nav />
+      <ControlledForm />
+      {/* <UnControlledForm /> */}
+      {/* <Timer />
+      <Dom /> */}
       {/* {state ? <Cardd /> : <Table />}
       <div style={{textAlign:'center', marginBottom:'50px'}}>
         <button onClick={()=>{setState(true)}}>Show Card</button>
@@ -50,7 +58,7 @@ function App() {
       {/* <A /> */}
       {/* <B /> */}
       {/* <Profile /> */}
-      <Counter />
+      {/* <Counter /> */}
       {/* <List /> */}
       {/* <Todo /> */}
     </div>
