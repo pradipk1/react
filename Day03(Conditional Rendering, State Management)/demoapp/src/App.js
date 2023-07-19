@@ -17,11 +17,30 @@ import Timer from "./Components/Timer/Timer";
 import Dom from "./Components/DOM/Dom";
 import UnControlledForm from "./Components/Form/UnControlledForm";
 import ControlledForm from "./Components/Form/ControlledForm";
+import A1 from "./Components/Context/Context_API_Test/A1";
+import Header1 from "./Components/Context/Header1";
+import Auth from "./Components/Context/Auth";
+import {loginContext} from './Components/Context/Context_API_Test/Context'
 
 
 function App() {
   // var header=true;
-  const [state,setState] = useState(false);
+  // const [state,setState] = useState(false);
+  const [state,setState] = useState({
+    isLoggedIn: false,
+    user: 'Guest User',
+  })
+
+  const fnLoggedIn = (data) => {
+    setState(data);
+  }
+
+  const fnLoggedOut = () => {
+    setState({
+      isLoggedIn: false,
+      user: 'Guest User',
+    })
+  }
   return (
 
     // Just below is the example of conditional rendering
@@ -42,8 +61,18 @@ function App() {
     // </div>
 
     <div>
-      <Nav />
-      <ControlledForm />
+      <loginContext.Provider value={{state, fnLoggedIn, fnLoggedOut}}>
+        <Header1 />
+        <Auth />
+      </loginContext.Provider>
+      
+      {/* <Nav /> */}
+      
+      {/* <div style={{padding:'50px 100px'}}>
+        <A1 />
+      </div> */}
+      
+      {/* <ControlledForm /> */}
       {/* <UnControlledForm /> */}
       {/* <Timer />
       <Dom /> */}
