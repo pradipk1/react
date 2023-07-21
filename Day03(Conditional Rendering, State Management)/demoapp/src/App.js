@@ -21,26 +21,35 @@ import A1 from "./Components/Context/Context_API_Test/A1";
 import Header1 from "./Components/Context/Header1";
 import Auth from "./Components/Context/Auth";
 import {loginContext} from './Components/Context/Context_API_Test/Context'
+import {Navigate, Route, Routes} from 'react-router-dom'
+import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import Product from "./Components/Products/Product";
+import Electronic from "./Components/Products/Electronic";
+import Jewelery from "./Components/Products/Jewelery";
 
 
 function App() {
   // var header=true;
   // const [state,setState] = useState(false);
-  const [state,setState] = useState({
-    isLoggedIn: false,
-    user: 'Guest User',
-  })
 
-  const fnLoggedIn = (data) => {
-    setState(data);
-  }
 
-  const fnLoggedOut = () => {
-    setState({
-      isLoggedIn: false,
-      user: 'Guest User',
-    })
-  }
+  // const [state,setState] = useState({
+  //   isLoggedIn: false,
+  //   user: 'Guest User',
+  // })
+
+  // const fnLoggedIn = (data) => {
+  //   setState(data);
+  // }
+
+  // const fnLoggedOut = () => {
+  //   setState({
+  //     isLoggedIn: false,
+  //     user: 'Guest User',
+  //   })
+  // }
+
+
   return (
 
     // Just below is the example of conditional rendering
@@ -61,12 +70,26 @@ function App() {
     // </div>
 
     <div>
-      <loginContext.Provider value={{state, fnLoggedIn, fnLoggedOut}}>
+      {/* <loginContext.Provider value={{state, fnLoggedIn, fnLoggedOut}}>
         <Header1 />
         <Auth />
-      </loginContext.Provider>
+      </loginContext.Provider> */}
       
-      {/* <Nav /> */}
+      <Nav />
+      <Routes>
+        <Route path='/counter' element={<Counter />}/>
+        <Route path='/profile' element={<Profile />}/>
+        <Route path='/todo' element={<Todo />}/>
+
+        <Route path='/products' element={<Product />}>
+          <Route path="" element={<Navigate to='electronic' />}/>
+          <Route path="electronic" element={<Electronic />}/>
+          <Route path="jewelery" element={<Jewelery />}/>
+        </Route>
+        
+        <Route path="*" element={<PageNotFound />}/>
+      </Routes>
+      
       
       {/* <div style={{padding:'50px 100px'}}>
         <A1 />
