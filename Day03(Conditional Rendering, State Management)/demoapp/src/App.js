@@ -26,6 +26,7 @@ import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import Product from "./Components/Products/Product";
 import Electronic from "./Components/Products/Electronic";
 import Jewelery from "./Components/Products/Jewelery";
+import ProductDetails from "./Components/Products/ProductDetails";
 
 
 function App() {
@@ -33,21 +34,21 @@ function App() {
   // const [state,setState] = useState(false);
 
 
-  // const [state,setState] = useState({
-  //   isLoggedIn: false,
-  //   user: 'Guest User',
-  // })
+  const [state,setState] = useState({
+    isLoggedIn: false,
+    user: 'Guest User',
+  })
 
-  // const fnLoggedIn = (data) => {
-  //   setState(data);
-  // }
+  const fnLoggedIn = (data) => {
+    setState(data);
+  }
 
-  // const fnLoggedOut = () => {
-  //   setState({
-  //     isLoggedIn: false,
-  //     user: 'Guest User',
-  //   })
-  // }
+  const fnLoggedOut = () => {
+    setState({
+      isLoggedIn: false,
+      user: 'Guest User',
+    })
+  }
 
 
   return (
@@ -70,25 +71,27 @@ function App() {
     // </div>
 
     <div>
-      {/* <loginContext.Provider value={{state, fnLoggedIn, fnLoggedOut}}>
+      <loginContext.Provider value={{state, fnLoggedIn, fnLoggedOut}}>
         <Header1 />
-        <Auth />
-      </loginContext.Provider> */}
-      
-      <Nav />
-      <Routes>
-        <Route path='/counter' element={<Counter />}/>
-        <Route path='/profile' element={<Profile />}/>
-        <Route path='/todo' element={<Todo />}/>
+        <Routes>
+          <Route path='/' element={<Auth />}/>
+          <Route path='/counter' element={state.isLoggedIn ? <Counter /> : <Navigate to="/"/>}/>
+          <Route path='/profile' element={state.isLoggedIn ? <Profile /> : <Navigate to="/"/>}/>
+          <Route path='/todo' element={<Todo />}/>
 
-        <Route path='/products' element={<Product />}>
-          <Route path="" element={<Navigate to='electronic' />}/>
-          <Route path="electronic" element={<Electronic />}/>
-          <Route path="jewelery" element={<Jewelery />}/>
-        </Route>
-        
-        <Route path="*" element={<PageNotFound />}/>
-      </Routes>
+          <Route path='/products' element={state.isLoggedIn ? <Product /> : <Navigate to="/"/>}>
+            <Route path="" element={<Navigate to='electronic' />}/>
+            <Route path="electronic" element={<Electronic />}/>
+            <Route path="jewelery" element={<Jewelery />}/>
+          </Route>
+          
+          <Route path="/productdetails/:id" element={<ProductDetails />}/>
+          <Route path="*" element={<PageNotFound />}/>
+        </Routes>
+      </loginContext.Provider>
+      
+      {/* <Nav /> */}
+      
       
       
       {/* <div style={{padding:'50px 100px'}}>

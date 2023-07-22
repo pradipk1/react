@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import './Counter.css'
+import { useSearchParams } from 'react-router-dom';
 
 function Counter() {
+
+  const [searchParam, setSearchParam] = useSearchParams();
+  console.log(searchParam.get("gender"));
 
   let [state, setState] = useState(0);
   console.log("Counter comp is called");
@@ -22,6 +26,10 @@ function Counter() {
         setState((prevState)=> prevState+1);
         setState((prevState)=> prevState+2);
         setState((prevState)=> prevState+3);
+
+        setSearchParam({
+          filter:'electronic',
+        });
     }
   return (
     <div className='counter'>

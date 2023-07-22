@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import { loginContext } from './Context_API_Test/Context'
+import { Link } from 'react-router-dom';
 
 let divStyle = {
     backgroundColor:'black',
@@ -25,13 +26,17 @@ function Header1() {
         <span style={{fontSize:'25px',}}>React</span>
       </div>
       <div>
-        <a style={aStyle} href='#'>Home</a>
-        <a style={aStyle} href='#'>Profile</a>
-        <a style={aStyle} href='#'>Product</a>
+        <Link style={aStyle} to='/'>Home</Link>
+        <Link style={aStyle} to='/profile'>Profile</Link>
+        <Link style={aStyle} to='/products'>Product</Link>
+        <Link style={aStyle} to='/counter/?gender=male&sort=asc'>Counter</Link>
         <span style={{marginRight:'30px', color:'green', fontSize:'20px'}}>
             {state.user}
         </span>
-        <button style={{marginRight:'50px'}} onClick={()=>{fnLoggedOut()}}>Logout</button>
+        {
+          state.isLoggedIn ? <button style={{marginRight:'50px'}} onClick={()=>{fnLoggedOut()}}>Logout</button> : <div></div>
+        }
+        
       </div>
     </div>
   )
