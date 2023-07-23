@@ -1,7 +1,7 @@
 .productContainer{
     margin: 100px auto;
     width: 1000px;
-    height: 350px;
+    height: 450px;
     box-shadow: 0 0 10px black;
     display: flex;
 }

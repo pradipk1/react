@@ -20,7 +20,7 @@ function Jewelery() {
         data.length > 0 ? <ul>
           {
             data.map((ele,index)=>{
-              return <Link to={`/productdetails/${ele.id}`} style={{color:'blue'}}><li style={{marginTop:'15px'}} key={index+1}>{ele.title}</li></Link>
+              return <Link to={`/productdetails/${ele.id}`} style={{color:'blue'}} key={index+1}><li style={{marginTop:'15px'}}>{ele.title}</li></Link>
             })
           }
         </ul> : <div style={{color:'red', textAlign:'center', marginTop:'100px'}}><h3>... Loading ...</h3></div>

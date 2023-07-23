@@ -23,8 +23,8 @@
 * Ex=> https://fakestoreapi.com/products?gender=male&sort=asc
 
 * In the Route Comp if we are using "?" just after "/" then whatever we write just after "?" it will be a Query Parameter for the React.
-* Ex=> <Route path="/productdetails/:id" element={<ProductDetails />}/>
-    In this Ex. the "id" is a Path Parameter.
+* Ex=> <Route path="/counter/?gender=male&sort=asc" element={<ProductDetails />}/>
+    In this Ex. the "gender" and "sort" are Query Parameters.
 
 
 
