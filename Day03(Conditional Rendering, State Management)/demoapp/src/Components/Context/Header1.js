@@ -30,6 +30,7 @@ function Header1() {
         <Link style={aStyle} to='/profile'>Profile</Link>
         <Link style={aStyle} to='/products'>Product</Link>
         <Link style={aStyle} to='/counter/?gender=male&sort=asc'>Counter</Link>
+        <Link style={aStyle} to='/redux'>Redux</Link>
         <span style={{marginRight:'30px', color:'green', fontSize:'20px'}}>
             {state.user}
         </span>

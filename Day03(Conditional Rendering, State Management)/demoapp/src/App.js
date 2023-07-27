@@ -27,6 +27,8 @@ import Product from "./Components/Products/Product";
 import Electronic from "./Components/Products/Electronic";
 import Jewelery from "./Components/Products/Jewelery";
 import ProductDetails from "./Components/Products/ProductDetails";
+import Input1 from "./Components/Redux/Input1";
+import Display from "./Components/Redux/Display";
 
 
 function App() {
@@ -77,6 +79,7 @@ function App() {
           <Route path='/' element={<Auth />}/>
           <Route path='/counter' element={state.isLoggedIn ? <Counter /> : <Navigate to="/"/>}/>
           <Route path='/profile' element={state.isLoggedIn ? <Profile /> : <Navigate to="/"/>}/>
+          <Route path='/redux' element={state.isLoggedIn ? <><Input1 /><Display /></> : <Navigate to="/"/>}/>
           <Route path='/todo' element={<Todo />}/>
 
           <Route path='/products' element={state.isLoggedIn ? <Product /> : <Navigate to="/"/>}>
