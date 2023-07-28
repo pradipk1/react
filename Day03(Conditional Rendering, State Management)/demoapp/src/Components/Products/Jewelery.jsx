@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
+import jeweleryAction from './Redux_Pipeline/jeweleryAction';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Jewelery() {
 
   const [data, setdata] = useState([]);
+
+  const dispatch = useDispatch();
+
+  const jeweleryData = useSelector((storeData)=>{
+    return storeData.products.jewelery;
+  })
   
   useEffect(()=>{
-    fetch("https://fakestoreapi.com/products/category/jewelery")
-    .then(res=>res.json())
-    .then((jdata)=>{
-      console.log(jdata);
-      setdata(jdata);
-    });
+    if(jeweleryData.length===0){
+      fetch("https://fakestoreapi.com/products/category/jewelery")
+      .then(res=>res.json())
+      .then((jdata)=>{
+        console.log(jdata);
+        jeweleryAction(jdata, dispatch);
+        setdata(jdata);
+      });
+    }else{
+      setdata(jeweleryData);
+    }
   },[]);
   return (
     <div style={{padding:'50px'}}>

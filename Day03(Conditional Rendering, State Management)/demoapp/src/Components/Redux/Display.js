@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux'
 function Display() {
 
     const data = useSelector((storeData)=>{
-        return storeData;
+        return storeData.name;
     })
   return (
     <div style={{padding:'30px 100px'}}>
