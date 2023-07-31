@@ -38,7 +38,7 @@
 ## getSate()
 * Using getState() we can access entire Data of redux store
 * import myStore and then call getState() as myStore.getState()
-* Ex=> available in day12/js/redux/index
+* Ex=> available in day12/js/index
 
 
 ## Steps to implement Redux in React
