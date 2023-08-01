@@ -56,7 +56,7 @@ function Electronic() {
         electronicData.length > 0 ? <ul>
           {
             electronicData.map((ele,index)=>{
-              return <Link to={`/productdetails/${ele.id}`} key={index+1} style={{color:'blue'}}><li style={{marginTop:'15px'}}>{ele.title}</li></Link>
+              return <Link to={`/productdetails/${ele.id}/${ele.category}`} key={index+1} style={{color:'blue'}}><li style={{marginTop:'15px'}}>{ele.title}</li></Link>
             })
           }
         </ul> : <div style={{textAlign:'center', color:'red', marginTop:'100px'}}><h3>... Loading ...</h3></div>

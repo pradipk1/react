@@ -88,7 +88,7 @@ function App() {
             <Route path="jewelery" element={<Jewelery />}/>
           </Route>
           
-          <Route path="/productdetails/:id" element={<ProductDetails />}/>
+          <Route path="/productdetails/:id/:category" element={<ProductDetails />}/>
           <Route path="*" element={<PageNotFound />}/>
         </Routes>
       </loginContext.Provider>
