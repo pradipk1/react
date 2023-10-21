@@ -29,6 +29,7 @@ import Jewelery from "./Components/Products/Jewelery";
 import ProductDetails from "./Components/Products/ProductDetails";
 import Input1 from "./Components/Redux/Input1";
 import Display from "./Components/Redux/Display";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 
 function App() {
@@ -77,8 +78,10 @@ function App() {
         <Header1 />
         <Routes>
           <Route path='/' element={<Auth />}/>
+          
+          <Route path='/profile' element={<PrivateRoute><Profile /></PrivateRoute>}/>
+
           <Route path='/counter' element={state.isLoggedIn ? <Counter /> : <Navigate to="/"/>}/>
-          <Route path='/profile' element={state.isLoggedIn ? <Profile /> : <Navigate to="/"/>}/>
           <Route path='/redux' element={state.isLoggedIn ? <><Input1 /><Display /></> : <Navigate to="/"/>}/>
           <Route path='/todo' element={<Todo />}/>
 
