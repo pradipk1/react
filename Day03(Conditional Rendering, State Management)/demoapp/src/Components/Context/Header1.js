@@ -35,7 +35,7 @@ function Header1() {
             {state.user}
         </span>
         {
-          state.isLoggedIn ? <button style={{marginRight:'50px'}} onClick={()=>{fnLoggedOut()}}>Logout</button> : <div></div>
+          state.isLoggedIn ? <button style={{marginRight:'50px', cursor:'pointer'}} onClick={()=>{fnLoggedOut()}}>Logout</button> : <div></div>
         }
         
       </div>

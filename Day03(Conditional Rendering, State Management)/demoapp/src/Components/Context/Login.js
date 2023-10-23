@@ -14,7 +14,7 @@ function Login() {
     const handleForm = (event) => {
         event.preventDefault();
         // console.log(state);
-        if(state.name==='Kabir' && state.password==='Kabir@123'){
+        if(state.name===process.env.REACT_APP_USERNAME && state.password===process.env.REACT_APP_PASSWORD){
             // alert("Logged In");
             fnLoggedIn({
                 isLoggedIn:'true',
