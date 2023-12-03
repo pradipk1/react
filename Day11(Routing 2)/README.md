@@ -1,5 +1,6 @@
 ## Path Parameter or URL Parameter
 * Ex=> https://fakestoreapi.com/products/1
+
     In the above URL, there are some parameters like protocol, domain name, path, information etc.
     http => Protocol
     fakestoreapi.com => Domain name of the website

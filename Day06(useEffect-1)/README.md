@@ -40,7 +40,7 @@ are called as hooks.
 * In react, any Action which is performed without taking the help of React Library or React API are 
 known as Side Effects.
 * Ex=> fetch() method, localstorage or session storage etc are not related to React Library. So we 
-can say taht these are the Sise Effects.
+can say that these are the Side Effects.
 
 * useEffect() hook is a special function which will help us to perform Side Effects (actions) whenever 
 React Comp is under certain Phase.

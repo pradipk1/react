@@ -58,6 +58,6 @@
 * Ex=> available in day03/src/comp/app
 
 * If we want to show any default Component inside Internal Routing then we can use a Comp called Navigate inside the Route Comp.
-* For this, the path of Route Comp shoul be empty and we call Navigate Comp as element of Route Comp.
+* For this, the path of Route Comp should be empty and we call Navigate Comp as element of Route Comp.
 * Navigate Comp takes one argument i.e "to" and we give the path path of the default Comp as value of "to".
 * Ex=> available in day03/src/app.js
